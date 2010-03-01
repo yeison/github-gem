@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 History.txt
 LICENSE
 Manifest
@@ -10,9 +11,21 @@ lib/commands/helpers.rb
 lib/commands/issues.rb
 lib/commands/network.rb
 lib/github.rb
+=======
+bin/gist
+bin/github
+commands/gist/commands.rb
+commands/gist/helpers.rb
+commands/github/commands.rb
+commands/github/helpers.rb
+commands/helpers.rb
+github-gem.gemspec
+lib/extensions.rb
+>>>>>>> defunkt/gist
 lib/github/command.rb
 lib/github/extensions.rb
 lib/github/helper.rb
+<<<<<<< HEAD
 lib/github/ui.rb
 setup.rb
 spec/command_spec.rb
@@ -36,3 +49,20 @@ spec/github_spec.rb
 spec/helper_spec.rb
 spec/spec_helper.rb
 spec/windoze_spec.rb
+=======
+lib/github.rb
+LICENSE
+Manifest
+README
+spec/gist/command_spec.rb
+spec/gist/helper_spec.rb
+spec/gist/spec_helper.rb
+spec/github/command_spec.rb
+spec/github/helper_spec.rb
+spec/github/spec_helper.rb
+spec/shared/command_spec.rb
+spec/shared/extensions_spec.rb
+spec/shared/github_spec.rb
+spec/shared/windoze_spec.rb
+spec/spec_helper.rb
+>>>>>>> defunkt/gist

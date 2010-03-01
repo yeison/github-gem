@@ -1,5 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
+<<<<<<< HEAD:spec/helper_spec.rb
 class HelperRunner
   def initialize(parent, name)
     @parent = parent
@@ -20,6 +21,8 @@ class HelperRunner
   end
 end
 
+=======
+>>>>>>> defunkt/gist:spec/github/helper_spec.rb
 describe GitHub::Helper do
   include SetupMethods
 

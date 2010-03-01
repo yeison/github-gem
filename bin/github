@@ -5,4 +5,5 @@ $LOAD_PATH.unshift lib_dir if File.directory?(lib_dir)
 
 require 'github'
 
+GitHub.command_name = 'github'
 GitHub.activate ARGV

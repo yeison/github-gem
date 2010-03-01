@@ -1,4 +1,8 @@
+<<<<<<< HEAD:spec/github_spec.rb
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+=======
+require File.dirname(__FILE__) + '/../spec_helper'
+>>>>>>> defunkt/gist:spec/shared/github_spec.rb
 
 describe "GitHub.parse_options" do
   it "should parse --bare options" do

@@ -1,4 +1,8 @@
+<<<<<<< HEAD:spec/extensions_spec.rb
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+=======
+require File.dirname(__FILE__) + "/../spec_helper"
+>>>>>>> defunkt/gist:spec/shared/extensions_spec.rb
 
 describe "When calling #try" do
   specify "objects should return themselves" do

@@ -1,4 +1,8 @@
+<<<<<<< HEAD:spec/command_spec.rb
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+=======
+require File.dirname(__FILE__) + '/../spec_helper'
+>>>>>>> defunkt/gist:spec/shared/command_spec.rb
 
 describe GitHub::Command do
   before(:each) do

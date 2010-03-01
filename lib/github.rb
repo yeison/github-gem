@@ -25,8 +25,21 @@ module GitHub
 
   BasePath = File.expand_path(File.dirname(__FILE__))
 
+<<<<<<< HEAD
   def command(command, options = {}, &block)
     command = command.to_s
+=======
+  @@command_name = 'github'
+
+  def command_name=(name)
+    @@command_name = name
+  end
+  def command_name
+    @@command_name
+  end
+
+  def command(command, &block)
+>>>>>>> defunkt/gist
     debug "Registered `#{command}`"
     descriptions[command] = @next_description if @next_description
     @next_description = nil
@@ -125,6 +138,30 @@ module GitHub
     end
   end
 
+<<<<<<< HEAD
+=======
+  def load(file)
+    if file[0] == ?/
+      path = file
+    else
+      # if both exist, we want to load both
+      path = BasePath + "/commands/#{command_name}/#{file}"
+      path2 = BasePath + "/commands/#{file}"
+      if File.exists?(path)
+        if File.exists?(path2)
+          data = File.read(path)
+          GitHub.module_eval data, path
+          path = path2
+        end
+      else
+        path = path2
+      end
+    end
+    data = File.read(path)
+    GitHub.module_eval data, path
+  end
+
+>>>>>>> defunkt/gist
   def debug(*messages)
     puts *messages.map { |m| "== #{m}" } if debug?
   end
@@ -152,10 +189,16 @@ module GitHub
   end
 end
 
+<<<<<<< HEAD
 GitHub.command :default, :aliases => ['', '-h', 'help', '-help', '--help'] do
   message = []
   message << "Usage: github command <space separated arguments>"
   message << "Available commands:"
+=======
+GitHub.command :default do
+  puts "Usage: #{GitHub.command_name} command <space separated arguments>", ''
+  puts "Available commands:", ''
+>>>>>>> defunkt/gist
   longest = GitHub.descriptions.map { |d,| d.to_s.size }.max
   indent = longest + 6 # length of "  " + " => "
   fmt = Text::Format.new(
