@@ -1,8 +1,4 @@
-<<<<<<< HEAD:spec/extensions_spec.rb
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-=======
-require File.dirname(__FILE__) + "/../spec_helper"
->>>>>>> 670a1a6... Hoist the specs into a per-binary spec structure:spec/shared/extensions_spec.rb
 
 describe "When calling #try" do
   specify "objects should return themselves" do
